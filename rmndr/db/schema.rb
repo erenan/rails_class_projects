@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140501034605) do
+ActiveRecord::Schema.define(version: 20140501041459) do
+
+  create_table "links", force: true do |t|
+    t.string   "title"
+    t.string   "url"
+    t.date     "expire_date"
+    t.integer  "hits"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  create_table "reminders", force: true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.date     "remind_date"
+    t.date     "expire_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

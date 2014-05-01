@@ -5,9 +5,19 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
 
+  <style>
+	table,th,td
+	{
+	border:1px solid black;
+	}
+  </style>
+
+</head>
+
+<body>
+  <%= image_tag("Logo.png", :width=>"800", :alt => "RMNDR Logo") %>
+  <br>
   <% if user_signed_in? %>
     <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
   <% else %>
