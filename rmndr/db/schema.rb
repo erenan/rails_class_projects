@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140501041459) do
+ActiveRecord::Schema.define(version: 20140502040851) do
 
   create_table "links", force: true do |t|
     t.string   "title"
@@ -21,6 +21,11 @@ ActiveRecord::Schema.define(version: 20140501041459) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+  end
+
+  create_table "messages", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "reminders", force: true do |t|
